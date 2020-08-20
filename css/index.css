@@ -1,0 +1,561 @@
+/******************************** Banner area main h1 part ***********************/
+.banner-area {
+  position: relative;
+  background: linear-gradient(
+      90deg,
+      rgba(197, 197, 197, 0.445) 100%,
+      rgba(223, 223, 223, 0.295) 20%
+    ),
+    url("../img/author-ly_heroImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+.banner-text {
+  position: relative;
+  z-index: 0;
+  top: 25%;
+  left: 0%;
+  width: 50vw;
+  text-align: left;
+  margin-left: 7rem;
+}
+.banner-text .banner-preheading {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--tertiary-color);
+  font-weight: 800;
+  padding-bottom: 3rem;
+  /* letter-spacing: 0.1rem; */
+  text-transform: uppercase;
+}
+.banner-text h1 {
+  letter-spacing: 1px;
+  font-size: 6rem;
+}
+.banner-text .banner-subtext {
+  letter-spacing: 2px;
+  padding-top: 3rem;
+  font-weight: 800;
+  font-size: 2rem;
+  display: block;
+  color: var(--tertiary-color);
+}
+
+.banner-text a {
+  text-decoration: none;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.6rem;
+  background: var(--primary-color);
+  color: var(--dark-gray);
+  padding: 1.5rem 2rem;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-top: 5rem;
+
+  border-radius: 5rem;
+}
+
+.banner-text a:hover {
+  box-shadow: 0rem 0.5rem 1rem rgba(116, 116, 116, 0.5);
+  transform: translateY(-1px);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transition: all ease-in-out 0.4s 0.1s;
+}
+@media screen and (max-width: 1277px) {
+  .banner-text {
+    width: 65vw;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .banner-text {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 780px) {
+  .banner-text {
+    width: 90vw;
+    margin-left: 4rem;
+    top: 18%;
+  }
+  .banner-text .banner-preheading {
+    font-size: 1.6rem;
+  }
+  .banner-text h1 {
+    font-size: 4.4rem;
+  }
+  .banner-text .banner-subtext {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .banner-text {
+    width: 95vw;
+    margin-left: 1.5rem;
+  }
+  .banner-text .banner-preheading {
+    font-size: 1.6rem;
+  }
+  .banner-text h1 {
+    font-size: 4rem;
+  }
+  .banner-text .banner-subtext {
+    font-size: 1.6rem;
+    padding-top: 5rem;
+    color: var(--dark-gray);
+  }
+}
+@media screen and (max-width: 300px) {
+  .banner-text {
+    width: 90vw;
+
+    margin-left: 1.5rem;
+  }
+  .banner-text .banner-preheading {
+    font-size: 1.4rem;
+    padding-top: 2rem;
+  }
+  .banner-text h1 {
+    font-size: 3rem;
+  }
+  .banner-text .banner-subtext {
+    font-size: 1.5rem;
+  }
+}
+/******************************Baner ENDS ***************************/
+
+/************************features sections ***********************/
+.heading {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+.heading::after {
+  content: "";
+  width: 15vw;
+  height: 0.8rem;
+  background-color: rgba(255, 181, 61, 0.93);
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+.containerPadding {
+  padding-top: 5rem;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 114rem;
+}
+.featureHeading {
+  font-size: 1.9rem;
+  font-weight: bolder;
+  text-align: left;
+}
+.services-box {
+  background-color: var(--light-gray);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.082), 0 6px 6px rgba(0, 0, 0, 0.123);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+  width: 350px;
+}
+.services-box:hover {
+  box-shadow: 0 10px 20px rgba(255, 181, 61, 0.24);
+}
+.services-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.services-box-red::after {
+  background-color: hsl(0, 78%, 62%);
+}
+
+.services-box-cyan::after {
+  background-color: hsl(180, 62%, 55%);
+}
+
+.services-box-orange::after {
+  background-color: hsl(34, 97%, 64%);
+}
+
+.services-box-blue::after {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.services-box-push {
+  transform: translateY(50%);
+}
+
+.services h2 {
+  margin: 0;
+}
+
+.services p {
+  font-size: 14px;
+  margin: 15px 0 40px;
+}
+
+.services img {
+  display: block;
+  margin-left: auto;
+  height: 80px;
+}
+
+@media (max-width: 775px) {
+  .services-box-push {
+    transform: translateY(0);
+  }
+}
+
+/********************************** features section ends ************************************/
+
+/*********************************** PRICING SECTION STARTS ****************************/
+@media screen and (max-width: 1250px) and (min-width: 859px) {
+  .pricingSection {
+    padding-top: 10rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading::after {
+    width: 25vw;
+  }
+}
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.card {
+  padding-top: 1rem;
+  border-radius: 20px;
+  width: 33rem;
+  background-color: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(116, 116, 116, 0.5);
+  transition: transform ease-in-out 0.4s;
+}
+
+.card .card-img {
+  height: 15rem;
+  object-fit: cover;
+}
+.card h3 {
+  font-size: 2rem;
+  color: #333;
+  margin: 2rem 0;
+}
+.price {
+  color: orangered;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.features {
+  margin: 4rem 0 2rem 0;
+  text-align: center;
+  color: #333;
+}
+.features li {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.Order-btn {
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 181, 61, 0.93);
+  border-radius: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 1.5rem;
+  transition: all ease-in-out 0.25s;
+}
+.Order-btn:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 800;
+}
+.Order-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.features {
+  list-style: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    width: 36rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-content: center;
+  }
+  .card {
+    margin: 2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-content: center;
+  }
+  .card {
+    margin: 2rem;
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(255, 189, 46, 0.562);
+}
+/* PRICING SECTION ENDS */
+/********************************TYPE OF CONTENTS *******/
+.typeOfContentsContainer {
+  padding: 0 20px;
+  margin: 30px auto;
+  max-width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.flextypeOfContentsContainer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flextypeOfContentsContainer > * {
+  flex: 1;
+  padding: 10px;
+}
+.listContetnsContainer {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width: 20rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.normalText {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.listContetnsContainer p {
+  width: 30rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 0.6rem 2rem 0.6rem 3rem;
+  border-radius: 2.5rem;
+  background-color: rgba(160, 160, 160, 0.103);
+  cursor: context-menu;
+}
+.listContetnsContainer p:hover {
+  color: var(--primary-color);
+}
+.imageContainerTypeOfContainer img {
+  width: 55rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .imageContainerTypeOfContainer img {
+    width: 45rem;
+  }
+  .listContetnsContainer p {
+    width: 25rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .imageContainerTypeOfContainer img {
+    display: none;
+    width: 30rem;
+  }
+}
+.text {
+  width: 60%;
+  margin-left: 20%;
+  padding: 0 2rem;
+  border-radius: 2rem;
+}
+.describeText {
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+
+  font-weight: 600;
+  text-align: justify;
+  color: var(--dark-gray);
+}
+
+@media screen and (max-width: 650px) {
+  .imageContainerTypeOfContainer img {
+    display: inline;
+  }
+  .flextypeOfContentsContainer {
+    flex-direction: column;
+  }
+  .text {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .imageContainerTypeOfContainer img {
+    width: 25rem;
+  }
+  .flextypeOfContentsContainer {
+    flex-direction: column;
+  }
+  .normalText {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .containerPadding {
+    padding: 0.5rem;
+  }
+  .typeOfContentsContainer {
+    padding: 0 20px;
+    margin: 5px auto;
+    max-width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .card {
+    width: 30rem;
+  }
+  .heading {
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+    font-size: 1.9rem;
+  }
+  .text {
+    width: 90%;
+    margin-left: 5%;
+    /* font-size: 1rem; */
+  }
+  .describeText {
+    font-size: 1.3rem;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  width: 80%;
+  margin-left: 10%;
+}
+@media screen and (max-width: 1025px) {
+  .about {
+    margin-left: 2.5%;
+    width: 95%;
+  }
+  .about .heading {
+    font-size: 2rem;
+  }
+  .about .heading::after {
+    width: 10vw;
+  }
+}
+
+.about-author-ly {
+  width: 46%;
+}
+.about-author-ly:nth-child(1) {
+  margin-right: 4%;
+}
+.about-author-ly:nth-child(2) {
+  margin-left: 4%;
+}
+.grayBackground {
+  background-color: rgba(129, 129, 129, 0.062);
+  padding: 2rem;
+  margin-top: 0;
+  border-radius: 2rem;
+}
+.about .heading {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+@media screen and (max-width: 1025px) {
+  .about {
+    flex-direction: column;
+  }
+  .about-author-ly:nth-child(1) {
+    margin-right: 0%;
+  }
+  .about-author-ly:nth-child(2) {
+    margin-left: 0%;
+  }
+  .about-author-ly {
+    margin-left: 20%;
+    width: 60%;
+  }
+  .about-author-ly:nth-child(2) {
+    margin-left: 20%;
+  }
+  .about .heading::after {
+    width: 25vw;
+  }
+  .about .heading {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .about-author-ly {
+    margin-left: 5%;
+    width: 90%;
+  }
+  .about-author-ly:nth-child(2) {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 1025px) {
+}

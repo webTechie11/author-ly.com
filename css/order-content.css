@@ -1,0 +1,307 @@
+#navigation-panel {
+  background-color: var(--primary-color);
+}
+.contactDetailsTopmost {
+  background-color: var(--secondary-color);
+  height: 4rem;
+}
+.contactInfo a {
+  color: var(--light-gray);
+}
+.banner-area {
+  position: relative;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+/****form styling***/
+form {
+  display: flex;
+  /* width: 100vw; */
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 105rem;
+  margin: 0 auto;
+  position: relative;
+  top: 25%;
+  letter-spacing: 1px;
+}
+
+.formInputs {
+  width: 35%;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+}
+
+.formInputs input {
+  width: 100%;
+  height: 100%;
+  color: rgb(88, 88, 88);
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 2rem;
+  border: none;
+  outline: none;
+  font-size: 1.7rem;
+}
+
+.formInputs label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.formInputs label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid rgb(255, 153, 0);
+  left: 0px;
+  bottom: -1px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.formInputs label span {
+  font-size: 1.3rem;
+}
+
+.warning {
+  color: rgb(105, 105, 105);
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.warning .large {
+  font-size: 1.2rem;
+  color: orangered;
+}
+
+#warnEmailID {
+  display: none;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.formInputs input:focus + .label-name .content-name,
+.formInputs input:valid + .label-name .content-name {
+  transform: translateY(-175%);
+  color: rgb(255, 153, 0);
+}
+
+.formInputs input:focus + .label-name::after,
+.formInputs input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.radioButtons {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.radioButtons label span {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+input[type="radio"]:after {
+  width: 15px;
+  cursor: pointer;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffffff;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(180, 180, 180);
+}
+
+input[type="radio"]:checked::after {
+  background-color: #ffa500;
+}
+
+input:checked + .radioText {
+  color: rgb(252, 139, 10);
+  font-weight: 800;
+}
+
+textarea {
+  height: 12rem;
+  width: 35%;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+  border-color: -moz-use-text-color #ffffff #ffffff;
+  border-image: none;
+  border-radius: 6px 6px 6px 6px;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.12) inset;
+  color: #555555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4em;
+  padding: 5px 8px;
+  transition: background-color 0.2s ease 0s;
+}
+
+textarea:valid {
+  background: none;
+  outline: none;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: solid rgb(48, 48, 48) 1px;
+  border-right: solid rgb(48, 48, 48) 1px;
+}
+
+textarea:focus {
+  border-right: solid var(--primary-color) 3px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: solid var(--primary-color) 3px;
+}
+
+.labelsIndepedent {
+  width: 35%;
+  text-align: left;
+  font-size: 1.35rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+}
+.labelsIndepedent span {
+  font-size: 1.25rem;
+}
+.instruction {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  padding: 0 10%;
+}
+.instruction span {
+  display: block;
+  width: 100%;
+}
+.instruction .greeting {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+.instruction .Instructionheading {
+  padding-bottom: 2.5rem;
+  font-size: 1.9rem;
+}
+.instruction .steps {
+  font-size: 1.8rem;
+}
+.formInsideHeading {
+  font-weight: 800;
+  font-size: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .formInputs {
+    width: 50%;
+  }
+  textarea {
+    width: 50%;
+  }
+  .labelsIndepedent {
+    width: 50%;
+  }
+  .radioButtons {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .formInputs {
+    width: 60%;
+  }
+  textarea {
+    width: 60%;
+  }
+  .labelsIndepedent {
+    width: 60%;
+  }
+
+  .radioButtons {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .formInputs {
+    width: 80%;
+  }
+  textarea {
+    width: 80%;
+  }
+  .labelsIndepedent {
+    width: 80%;
+  }
+
+  .radioButtons {
+    width: 80%;
+  }
+  .radioButtons label span {
+    font-size: 1.4rem;
+  }
+  .instruction .greeting {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .instruction .Instructionheading {
+    padding-bottom: 2rem;
+    font-size: 1.7rem;
+  }
+  .instruction .steps {
+    font-size: 1.4rem;
+  }
+}
+button {
+  background-color: var(--primary-color); /* Green */
+  border-radius: 50rem;
+  border: none;
+  color: var(--secondary-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  margin-top: 5rem;
+}
+button:hover {
+  background-color: var(--secondary-color); /* Green */
+
+  color: var(--primary-color);
+}

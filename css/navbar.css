@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;800&display=swap");
+:root {
+  --primary-color: #ffb53ded;
+  --secondary-color: #006672;
+  --tertiary-color: #1b4763;
+  --white: rgb(255, 255, 255);
+  --light-gray: #f5f5f5;
+  --mid-gray: #ffb53dc5;
+  --dark-gray: #434649;
+  --black: #212529;
+}
+/* personalized root setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+body {
+  background-color: var(--white);
+}
+/* setting for common elements */
+a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: "Nunito Sans", sans-serif;
+}
+.bold {
+  font-weight: bold;
+}
+.textLarge {
+  font-size: 1.6rem;
+}
+.textFormal {
+  font-family: "Nunito Sans", sans-serif;
+}
+/* to blur the background when navpanel is visible */
+.blur {
+  opacity: 0.35;
+  transition: opacity 0.3s ease-in-out;
+}
+/*******top contact Details****/
+.contactDetailsTopmost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  background-color: var(--secondary-color);
+  flex-direction: row;
+
+  height: 4rem;
+
+  text-align: right;
+}
+.contactInfoBlank::after {
+  content: "";
+  width: 1%;
+  pointer-events: none;
+}
+.contactInfo {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: 2px;
+}
+.contactInfo a {
+  color: var(--light-gray);
+}
+.contactInfo span {
+  font-size: 1.6rem;
+  padding-right: 4rem;
+}
+.contactInfo img {
+  margin-top: 5px;
+  padding-right: 1rem;
+  height: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .contactInfo span {
+    font-size: 1.4rem;
+    padding-right: 2rem;
+  }
+  .contactInfo img {
+    margin-top: 5px;
+    padding-right: 1rem;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .contactInfo span {
+    font-size: 1.2rem;
+    padding-right: 1rem;
+  }
+  .contactInfo img {
+    margin-top: 5px;
+    padding-right: 0.2rem;
+    height: 15px;
+  }
+}
+/**************************************** navbar starts *******************************************/
+#navigation-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 6rem 1rem 0rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 4rem;
+  transition: background 0.55s;
+}
+/* navbar logo */
+#navigation-panel .logo img {
+  height: 10vh;
+  transition: height 0.5s;
+  padding: 1rem 1rem 1rem 3rem;
+}
+/* navbar ul element  */
+.nav-list {
+  width: 60rem;
+  justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+/* navbar anchor tag element */
+.nav-list a {
+  font-size: 1.8rem;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--dark-gray);
+}
+/* burger settings */
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.burger div {
+  width: 2.5rem;
+  height: 0.3rem;
+  margin: 0.5rem;
+  background-color: var(--light-gray);
+  transition: all 0.3s ease-in-out;
+}
+/* media settings for navbar */
+@media screen and (max-width: 900px) {
+  #navigation-panel {
+    padding: 0.8rem 4rem 1.3rem 0rem;
+  }
+  #navigation-panel .logo img {
+    height: 6rem;
+    padding: 2rem 1rem 1rem 2rem;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    z-index: 8;
+    right: 0px;
+    height: 90vh;
+    top: 8rem;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .nav-list li {
+    padding-top: 5rem;
+  }
+  .burger {
+    display: block;
+    padding-top: 1.2rem;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+/* navbar cross in mobile  */
+.toggleCross .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: var(--dark-gray);
+}
+.toggleCross .line2 {
+  opacity: 0;
+}
+.toggleCross .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: var(--dark-gray);
+}
+/* setting of active link in navbar */
+.nav-list .active a {
+  color: var(--black);
+  font-weight: bolder;
+  padding-bottom: 1px;
+  border-bottom: 2px solid var(--dark-gray);
+}
+/* Navigation panel after scrol */
+#navigation-panel.cus-nav {
+  background: var(--primary-color);
+  z-index: 9;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.35);
+}
+
+#navigation-panel.cus-nav .logo img {
+  height: 6rem;
+}
+/********************************* navbar ends  ********************************/
+/*WHATSAPPP***/
+.whatsAppLink {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  position: fixed;
+  z-index: 55;
+  bottom: 0;
+  pointer-events: none;
+}
+.whatsAppBlockBlank ::after {
+  content: "";
+  width: 1%;
+  pointer-events: none;
+}
+.whatsAppLink .logo {
+  height: 3.5rem;
+  padding: 0 1rem;
+}
+
+.fixedWhatsAppLink {
+  background-color: var(--mid-gray);
+  border-radius: 4rem;
+  color: var(--secondary-color);
+  padding: 0.6rem 1rem 0.6rem 1.8rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  pointer-events: all;
+  margin: 2rem 2rem;
+  transition: all ease-in-out 0.2s;
+}
+.fixedWhatsAppLink:hover {
+  background-color: var(--dark-gray);
+  color: var(--primary-color);
+}
+@media screen and (max-width: 400px) {
+  .fixedWhatsAppLink {
+    padding: 0.6rem 0.8rem 0.6rem 1.7rem;
+    font-size: 1.4rem;
+  }
+}
+.footer-black {
+  width: 100%;
+  padding: 2.5rem;
+  margin-top: 20rem;
+  padding-bottom: 5rem;
+  font-family: "Comfortaa", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+}
+
+.footer-black .branding {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: center;
+}
+.footer-black .branding h1 {
+  color: var(--primary-color);
+  width: 100%;
+  font-size: 4.2rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.footer-black .branding h1 span {
+  font-size: 1.4rem;
+  color: var(--light-gray);
+  display: block;
+}
+.footer-text a {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.footer-text a:hover {
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  text-decoration: underline;
+
+  transition: all ease-in-out 0.5s;
+}
+.footer-text img {
+  height: 20px;
+  padding-right: 0.5rem;
+}
+.footer-text .email {
+  height: 17px;
+  padding-right: 0.5rem;
+}
+
+.footerText,
+.footerText span {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.footer-container {
+  width: 33%;
+  text-align: center;
+}
+.footerHeading {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+.footer-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  font-size: 1.3rem;
+  padding-top: 2rem;
+}
+.connectIcon a {
+  margin: 1rem 3rem;
+}
+@media screen and (max-width: 615px) {
+  .footer-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+  }
+  .footer-container {
+    padding-bottom: 5rem;
+    width: 100%;
+  }
+}
+.copyright {
+  font-size: 1rem;
+  text-align: center;
+}
